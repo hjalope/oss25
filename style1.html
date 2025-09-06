@@ -37,6 +37,9 @@
       width: 180px;
       margin-right: 20px;
     }
+    .menu a {
+      text-decoration: none;
+    }
     .menu button {
       display: block;
       width: 100%;
@@ -54,6 +57,11 @@
       color: white;
       font-weight: bold;
     }
+    .menu button.disabled {
+      cursor: default;
+      color: #888;
+      background-color: #eee;
+    }
 
     /* main contents */
     .content {
@@ -65,10 +73,10 @@
 
     /* right sidebar */
     .sidebar {
-      width: 200px;
+      width: 180px;
       background-color: #32a4e7;
       color: white;
-      padding: 15px;
+      padding: 20px 10px;
       border-radius: 5px;
       margin-left: 20px;
     }
@@ -76,14 +84,15 @@
       margin-top: 0;
     }
 
-    /* 하단 박스 */
+    /* bottom box */
     .footer-box {
       border: 1px solid #ccc;
       padding: 15px;
       border-radius: 5px;
       margin-top: 20px;
-      font-size: 18px;
+      font-size: 13px;
       background-color: #f9f9f9;
+      text-align: center;
     }
   </style>
 </head>
@@ -97,11 +106,11 @@
   <div class="container">
     <!-- left menu -->
     <div class="menu">
-      <button class="active">Stylesheet 1</button>
-      <button>Stylesheet 2</button>
+      <a href="style1.html"><button class="active">Stylesheet 1</button></a>
+      <a href="style2.html"><button>Stylesheet 2</button></a>
       <button>Stylesheet 3</button>
       <button>Stylesheet 4</button>
-      <button>No Stylesheet</button>
+      <a href="nostyle.html"><button>No Stylesheet</button></a>
     </div>
 
     <!-- main contents -->
@@ -110,16 +119,18 @@
       <p>
         This is a demonstration of how different stylesheets can change the layout of your HTML page.
         You can change the layout of this page by selecting different stylesheets in the menu,
-        or by selecting one of the following links:
-        <a href="#">Stylesheet1</a>, <a href="#">Stylesheet2</a>,
-        <a href="#">Stylesheet3</a>, <a href="#">Stylesheet4</a>.
+        or by selecting one of the following links: <br>
+        <a href="style1.html" style="color: black;">Stylesheet1</a>, 
+        <a href="style2.html" style="color: black;">Stylesheet2</a>, 
+        <a href="#" style="color: black;">Stylesheet3</a>, 
+        <a href="#" style="color: black;">Stylesheet4</a>,
       </p>
 
       <h3>No Styles</h3>
       <p>
         This page uses DIV elements to group different sections of the HTML page.
         Click here to see how the page looks like with no stylesheet:
-        <a href="#">No Stylesheet</a>.
+        <a href="nostyle.html" style="color: black;">No Stylesheet</a>.
       </p>
     </div>
 
